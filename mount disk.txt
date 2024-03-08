@@ -1,0 +1,15 @@
+blkid
+cfdisk 
+mkfs.ext4 /dev/disk
+mount -t ext4 /dev/disk past/
+
+nano /etc /fstab
+/dev/sdb1 /disco2 ext3 defaults,errors=remount-ro 0 1
+
+mount -a
+/dev/disk /mnt/pasta defaults 0 0
+
+### EXAMPLE ###
+
+/dev/nvme1n1p2 /mnt/disk ntfs-3g silent,umask=0,nls=iso8859-1 0 0
+mount -t auto /dev/nvme1n1p2 /mnt/disk/

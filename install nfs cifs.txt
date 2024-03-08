@@ -1,0 +1,1 @@
+apt install cifs-utils nfs-common -y
