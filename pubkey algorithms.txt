@@ -1,0 +1,5 @@
+PubkeyAcceptedAlgorithms +ssh-rsa,ssh-dss
+
+HostkeyAlgorithms +ssh-rsa,ssh-dss
+
+HostKey /etc/ssh/ssh_host_dsa_key
