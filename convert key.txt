@@ -1,0 +1,7 @@
+ssh-keygen -o -a 100 -t ed25519 -C "username@email.com"
+
+apt-get install putty-tools
+
+puttygen pemKey.pem -o ppkKey.ppk -O private
+
+puttygen ppkkey.ppk -O private-openssh -o pemkey.pem
