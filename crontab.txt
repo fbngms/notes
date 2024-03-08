@@ -1,0 +1,22 @@
+###########################################
+crontab -e
+###########################################
+
+*/1 * * * * /root/tomcat.sh
+
+###########################################
+tomcat.sh
+###########################################
+
+#!/bin/bash
+qtde=$(ps aux | grep "java" | wc -l)
+
+if test "$qtde" -lt "2"
+then
+echo "tomcat is offline";
+echo "Starting...";
+sh /opt/techne/lyceum/tomcat/bin/startup.sh
+else
+echo "tomcat is online." ;
+echo "Nothing to do.";
+fi
