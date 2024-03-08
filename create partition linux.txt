@@ -1,0 +1,17 @@
+1 - lsblk
+2 - gdisk /dev/disk
+3 - n
+4 - w
+5 - mkfs.ext4 -L /mnt/pasta /dev/disk1
+6 - nano /etc/fstab
+7 - LABEL=nome /mnt/pasta ext4 defaults 0 0
+8 - mount -a
+
+1 - lsblk
+2 - fdisk /dev/disk
+3 - n
+4 - w
+5 - mkfs -t ext4 /dev/disk1
+6 - nano /etc/fstab
+7 - LABEL=nome /mnt/pasta ext4 defaults 0 0
+8 - mount -a
