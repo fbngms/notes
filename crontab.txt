@@ -15,7 +15,7 @@ if test "$qtde" -lt "2"
 then
 echo "tomcat is offline";
 echo "Starting...";
-sh /opt/techne/lyceum/tomcat/bin/startup.sh
+sh /opt/tomcat/bin/startup.sh
 else
 echo "tomcat is online." ;
 echo "Nothing to do.";
