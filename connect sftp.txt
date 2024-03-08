@@ -1,0 +1,1 @@
+sftp -oPort=49512 maiscampus@sftp.techne.com.br
