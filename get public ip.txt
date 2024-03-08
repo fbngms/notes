@@ -1,0 +1,9 @@
+dig +short myip.opendns.com @resolver1.opendns.com
+
+dig TXT +short o-o.myaddr.l.google.com @ns1.google.com
+
+nslookup myip.opendns.com resolver1.opendns.com
+
+nslookup -querytype=TXT o-o.myaddr.l.google.com ns1.google.com
+
+host myip.opendns.com resolver1.opendns.com | grep "myip.opendns.com has" | awk '{print $4}'
