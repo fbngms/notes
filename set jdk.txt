@@ -1,0 +1,36 @@
+JAVA 8 - Oracle JDK
+
+# O download está em /usr/lib/jvm, descompactar o arquivo "jdk-8u231-oracle.tar.gz" e renomear para "jdk-8u231-oracle/"
+wget -c -O jdk-8u231-oracle.tar.gz -P /usr/lib/jvm/ https://github.com/hmsjy2017/get-jdk/releases/download/v8u231/jdk-8u231-linux-x64.tar.gz
+
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-8u231-oracle/bin/java 1
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-8u231-oracle/bin/javac 1
+sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk-8u231-oracle/bin/jar 1
+
+sudo update-alternatives --set java /usr/lib/jvm/jdk-8u231-oracle/bin/java
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+sudo update-alternatives --config jar
+
+export JAVA_HOME="/usr/local/jvm/jdk-8u231-oracle"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+JAVA 11 - OpenJDK
+
+# O download está em /usr/lib/jvm, descompactar o arquivo "openjdk-11.0.16.1+1.tar.gz" e renomear para "openjdk-11.0.16.1+1/"
+wget -c -O openjdk-11.0.16.1+1.tar.gz -P /usr/lib/jvm/ https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz
+
+# O download está em /usr/lib/jvm/openjdk-11.0.16.1+1/, descompactar o arquivo "jre.tar.gz" e renomear para "jre/"
+wget -c -O jre.tar.gz -P /usr/lib/jvm/openjdk-11.0.16.1+1/ https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz
+
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/openjdk-11.0.16.1+1/bin/java 2
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/openjdk-11.0.16.1+1/bin/javac 2
+sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/openjdk-11.0.16.1+1/bin/jar 2
+
+sudo update-alternatives --set java /usr/lib/jvm/openjdk-11.0.16.1+1/bin/java
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+sudo update-alternatives --config jar
+
+export JAVA_HOME="/usr/local/jvm/openjdk-11.0.16.1+1"
+export PATH="$JAVA_HOME/bin:$PATH"
