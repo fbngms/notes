@@ -1,0 +1,5 @@
+su -c ./startup.sh -s /bin/sh username
+
+runuser -l usuario -c comando
+
+sudo -H -u usuario bash -c programa
