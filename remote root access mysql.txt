@@ -1,0 +1,10 @@
+# mysql -u root -p
+> use mysql;
+> update user set plugin='' where User='root';
+> grant all privileges on *.* to 'root'@'%' identified by 'sua senha';
+> flush privileges;
+> exit
+Edite o arquivo /etc/mysql/mariadb.conf.d/50-server.cnf, colocando um "#" na linha:
+#bind-address
+Reinicie o serviço:
+# service mysql restart
