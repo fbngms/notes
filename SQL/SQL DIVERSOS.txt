@@ -1,0 +1,37 @@
+select name,state_desc from sys.databases
+
+select usuario as USER_SECRETARIA, dbo.Decrypt(senha) as SENHA from usuario
+
+select @@version (consultar a versao do sql via query)
+
+select usuario as USER_SECRETARIA, dbo.Decrypt(senha) as SENHA from usuario
+
+SELECT s.name
+FROM sys.schemas s
+WHERE s.principal_id = USER_ID('Descomplica_cronos');
+
+Remover usuarios bloqueados do banco:
+drop trigger adm_tr_alteracoes on database
+
+ALTER AUTHORIZATION ON SCHEMA::cronos TO dbo;
+
+--what schemas does this user own?
+SELECT SCHEMA_NAME, 
+    SCHEMA_OWNER
+FROM INFORMATION_SCHEMA.schemata
+WHERE SCHEMA_OWNER = 'Hep_cronos';
+
+--transfer schema ownership to dbo
+ALTER AUTHORIZATION ON SCHEMA::cronos TO dbo;
+
+SELECT name, suser_sname(owner_sid) AS Database_Owner FROM sys.databases
+
+USE Descomplica_Hades --Change DBNAME with your database name
+GO
+sp_changedbowner 'sa'
+
+[16:53] Angélica Conceição Cordeiro
+select COD_VALIDACAO,* from LY_DIPLOMA_DIGITAL where status_atual='FINALIZADO'
+
+Consulta Views
+sp_helptext 'usuario'
