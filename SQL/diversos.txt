@@ -1,0 +1,10 @@
+select name,state_desc from sys.databases
+
+select usuario as USER_SECRETARIA, dbo.Decrypt(senha) as SENHA from usuario
+
+SELECT name, suser_sname(owner_sid) AS Database_Owner FROM sys.databases
+
+select COD_VALIDACAO,* from LY_DIPLOMA_DIGITAL where status_atual='FINALIZADO'
+
+Consulta Views
+sp_helptext 'usuario'

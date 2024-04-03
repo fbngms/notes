@@ -1,0 +1,7 @@
+SELECT s.name
+FROM sys.schemas s
+WHERE s.principal_id = USER_ID('username');
+
+ALTER AUTHORIZATION ON SCHEMA::schema TO dbo;
+
+DROP USER username;

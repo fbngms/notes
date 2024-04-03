@@ -1,0 +1,3 @@
+USE DBNAME
+GO
+sp_changedbowner 'username'
