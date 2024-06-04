@@ -1,5 +1,4 @@
-rsync -agopPrtuvz
-rsync -avzrPptu --delete ORIGEM DESTINO
+rsync -agopPrtuvz ORIGEM DESTINO
 
 -a	Modo de arquivamento.
 -g	Preserva o grupo.
@@ -13,8 +12,9 @@ rsync -avzrPptu --delete ORIGEM DESTINO
 -u	Força o rsync a ignorar todos os arquivos existentes no destino e cuja hora de modificação seja mais recente que o arquivo de origem.
 -v	Modo detalhado para exibir muitas informações é apresentado durante a transferência.
 -z	Compacta o arquivo para uma melhor transferência de rede.
-– -delete	Sincronização e espelho perfeito, o arquivo de destino será deletado caso não esteja presente na fonte.
-– -exclude	Exclui arquivos do backup.
-– – maxsize	Especifica um tamanho máximo de arquivo para não transferir.
-– -partial	Por padrão, o rsync excluirá todos os arquivos parcialmente transferidos se a transferência for interrompida. Esse comando diz ao rsync para manter o arquivo parcial, o que deve acelerar a transferência do restante do arquivo.
-– -progress	Mostra uma barra de progresso.
+
+--delete	Sincronização e espelho perfeito, o arquivo de destino será deletado caso não esteja presente na fonte.
+--exclude	Exclui arquivos do backup.
+--maxsize	Especifica um tamanho máximo de arquivo para não transferir.
+--partial	Por padrão, o rsync excluirá todos os arquivos parcialmente transferidos se a transferência for interrompida. Esse comando diz ao rsync para manter o arquivo parcial, o que deve acelerar a transferência do restante do arquivo.
+--progress	Mostra uma barra de progresso.
