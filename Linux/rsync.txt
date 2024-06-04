@@ -1,4 +1,4 @@
-rsync -avhzrP
+rsync -agopPrtuvz
 rsync -avzrPptu --delete ORIGEM DESTINO
 
 -a	Modo de arquivamento.
