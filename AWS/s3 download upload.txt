@@ -1,0 +1,7 @@
+Download ao S3
+aws s3 cp s3://diretorio-remoto/ D:\diretorio-local --recursive
+aws s3 cp s3://diretorio-remoto/$(Get-Date -format yyyy.MM.dd)/ E:\diretorio-local --recursive
+
+Envio ao S3
+aws s3 cp B:\diretorio-local\$(Get-Date -uformat %Y.%m.%d) s3://diretorio-remoto/$(Get-Date -format yyyy.MM.dd) --recursive --storage-class STANDARD_IA
+aws s3 sync diretorio-local s3://diretorio-remoto/
